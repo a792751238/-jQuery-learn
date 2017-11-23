@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		 /*
+		 * Dec:整体结构
+		 * Area:05
+		 */
+		//自执行的匿名函数
+		(function(window, undefined) {
+
+		})(window, undefined); //传入window，提高查找速度，而且可以方便压缩代码(根据作用域链的原理，变量从最近定义的变量开始查找)
+		//undefined在一些浏览器中能被修改，传入是为了防止外部修改
+
+		//普通的面向对象写法
+		function add() {
+
+		}
+		add.prototype.init = function() {
+
+		}
+		add.prototype.bind = function() {
+
+		}
+		var a1 = new add();
+		a1.init();
+		a1.bind();
+
+		//jquery的面向对象写法
+		function $() {
+			return new $.prototype.init();
+		}
+		$.prototype.init = function() {
+
+		}
+		$.prototype.bind = function() {
+
+		}
+		$.prototype.init.prototype = $.prototype;
+		//$是一个构造函数，prototype是对象，将$的原型赋值给了$的init()的原型下，形成了对象的引用，这样对原型的修改实际上对两个对象是一样的，同时修改了2个对象
+		//这样在$.prototype上写的方法在$.prototype.init上也能够使用
+
+		$().css();
+
+		/*
+		 * Dec:中间的正则
+		 * Area:06
+		 */
+		core_pnum  :正则数字匹配
+		core_rnotwhite:正则单词匹配
+		rquickExpr :正则标签匹配防止xss木马注入<p>aaa	或者		#div1
+		rsingleTag :正则匹配空标签<p></p> 	<div></div>
+		rmsPrefix  :IE的前缀
+	</script>
+
+</html>

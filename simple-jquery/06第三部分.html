@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * Dec:extend拷贝继承方法
+			 * Area:13-14
+			 */
+			jQuery.extend = jQuery.fn.extend = function() {
+				定义的一些变量
+
+				if() {} 判断是不是深拷贝情况
+
+				if() {} 判断参数是否正确
+
+				if() {} 看是不是插件情况
+
+				for() {
+					可能有多个对象情况
+
+					if() {} 防止循环引用
+
+					if() {} 深拷贝
+					else if() {} 浅拷贝
+				}
+			}
+
+			$.extend(); //jq中扩展方法的形式         ->this->$->this.aaa->$.aaa()
+			$.fn.extend(); //jq中扩展实例方法的形式	->this->$.fn->this.aaa->$().aaa()
+
+			当只写一个对象字面量的时候, jq中扩展插件的形式
+
+			//当只写多个对象字面量的时候,后面的对象都是扩展到第一个对象上面去  
+			var a = {
+
+			};
+			$.extend(a, { name: 'hello' }, { age: '30' });
+			console.log(a);
+
+			//深拷贝和浅拷贝
+			var a = {};
+			var b = { name: { age: 30 } };
+			$.extend(a, b);
+			a.name.age = 20;
+			alert(b.name.age); //20浅拷贝a改变b改变了，如果想要不受影响，就可以深拷贝，b不受影响
+		</script>
+	</head>
+
+	<body>
+		<!--jQ:拷贝继承 :构造函数的原型-->
+		<!--js：类式继承/原型继承 ->new 构造函数/{}-->
+	</body>
+
+</html>

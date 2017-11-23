@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * Dec:jquery.prototype
+			 * Area:07-12
+			 */
+			jQuery.fn = jQuery.prototype = {
+				jquery: 版本 //$().jquery
+
+				constructor: 修正指向问题 //constructor是创建对象下的一个属性，指向对象所属于的构造函数是谁
+				//js中当函数创建完成会自动在原型上添加constructor => func.prototype.constructor = func
+				init: 初始化和函数管理
+
+				selector: 存储选择到的字符串的形式
+
+				length: this对象的长度
+
+				toArray: 转数组
+
+				get: 把jq对象转原生集合
+
+				pushStack: jq对象的入栈 //栈：和队列类似，队列是先进先出，栈是先进后出
+
+				each: 遍历集合
+
+				ready: DOM加载的接口
+
+				slice: 集合的截取
+
+				first: 集合的第一项
+
+				last: 集合中的最后一项
+
+				eq: 集合的指定项
+
+				map: 对集合进行二次处理返回新集合
+
+				end: 回溯找到栈的下一级
+
+				push: 内部使用
+
+				sort: 内部使用
+
+				splice: 内部使用
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
